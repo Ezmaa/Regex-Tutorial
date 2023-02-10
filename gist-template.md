@@ -1,4 +1,4 @@
-# Regex Tutorial - Finding an Email
+# Regex Tutorial - Finding an Email :email:
 
 ## What Is Regex?
 
