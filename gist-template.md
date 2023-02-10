@@ -125,4 +125,4 @@ A driven developer at the University of New Hampshire currently completing a cer
 
 * Email: ezinmark@gmail.com
 * Github: https://github.com/Ezmaa
-* LinkedIn: [Ezinma-Nwankwo](linkedin.com/in/ezinma-nwankwo-3b7905234)]
+* LinkedIn: [Ezinma-Nwankwo](linkedin.com/in/ezinma-nwankwo-3b7905234)
