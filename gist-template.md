@@ -50,14 +50,14 @@ The characters ^ and $ are both considered to be anchors. The ^ anchor tells the
 $ signifies the end of the string `[a-z\.]{2,6}`, can should include an alphabet character that is a to z, because . is a meta character, a \. is used to define a literal dot as a parameter for the expression. The quantifier which is wrapped in curly brackets determines that the end of the string must be between 2 and 6 characters long. 
 ### Quantifiers
 ---
-Quantifiers are meta characters that determine how often the characters before the quantifier can occur. T
+Quantifiers are meta characters that determine how often the characters before the quantifier can occur. 
 ```
-?     occurs 0 or 1 time
-+     occurs 1 or more times
-*     occurs 0 or more times 
-{n}   occurs n times
-{n,}  occurs n or more times 
-{y,z} occurs y time, but less than z time 
+?        occurs 0 or 1 time
++        occurs 1 or more times
+*        occurs 0 or more times 
+{n}      occurs n times
+{n,}     occurs n or more times 
+{y,z}    occurs y time, but less than z time 
 ```
 The "+" quantifier means that the characters before the "+" can be one and repeated more times. The {2,6} quantifier means that the items in the bracket must iterate at least twice to generate 2 characters and no more than 6 iterations to generate 6 characters.
 ### OR Operator
