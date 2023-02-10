@@ -34,7 +34,6 @@ Briefly summarize the regex you will be describing and what you will explain. In
 A regex is considered a literal, so the pattern must be wrapped in slash characters (/). If we examine the “Matching an Email” regex, you'll see that this is true:
 ```
 /^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/
-
 ```
 ### Anchors
 Anchors are tokens of regex that don't match any of the characters, but the are used to define something about the matching process. The anchor is what starts and ends the regular expression. 
@@ -45,14 +44,22 @@ In the email matching regex:
 ```
 
 The characters ^ and $ are both considered to be anchors. The ^ anchor tells the expression what characters the string begins with. As the $ tells the expression signifies a string that ends with the characters that precede it.
-```
+
 ^ signifies that the string must start with [a-z0-9_\.-], Which then says that the email can use an alphabet character from a to z, number from 0 to 9, and can include an underscore, period, or hyphen.
 
 $ signifies the end of the string [a-z\.]{2,6}, can should include an alphabet character that is a to z, because . is a meta character, a \. is used to define a literal dot as a parameter for the expression. The quantifier which is wrapped in curly brackets determines that the end of the string must be between 2 and 6 characters long. 
 
 ### Quantifiers
-
-
+Quantifiers are meta characters that determine how often the characters before the quantifier can occur. T
+```
+? occurs 0 or 1 time
++ occurs 1 or more times
+* occurs 0 or more times 
+{n} occurs n times
+{n,} occurs n or more times 
+{y,z} occurs y time, but less than z time 
+```
+The "+" quantifier means that the characters before the "+" can be one and repeated more times. The {2,6} quantifier means that the items in the bracket must iterate at least twice to generate 2 characters and no more than 6 iterations to generate 6 characters.
 
 ### OR Operator
 
