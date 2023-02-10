@@ -31,11 +31,13 @@ Briefly summarize the regex you will be describing and what you will explain. In
 - [Look-ahead and Look-behind](#look-ahead-and-look-behind)
 
 ## Regex Components
+---
 A regex is considered a literal, so the pattern must be wrapped in slash characters (/). If we examine the “Matching an Email” regex, you'll see that this is true:
 ```
 /^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/
 ```
 ### Anchors
+---
 Anchors are tokens of regex that don't match any of the characters, but the are used to define something about the matching process. The anchor is what starts and ends the regular expression. 
 
 In the email matching regex: 
@@ -64,30 +66,30 @@ The "+" quantifier means that the characters before the "+" can be one and repea
 The "or" operator "|" allows there to be a choice in matching where the expression matches before or after is acceptable. In this example, there are no "or" operators.
 ### Character Classes
 ---
--\	Marks the next character as either a special character or a literal.
--^	Matches the beginning of input.
--$	Matches the end of input.
--*	Matches the preceding character zero or more times. For example, zo* matches either z or zoo.
--+	Matches the preceding character one or more times. For example, zo+ matches zoo but not z.
--?	Matches the preceding character zero or one time. For example, a?ve? matches the ve in never.
--.	Matches any single character except a newline character.
+*\	Marks the next character as either a special character or a literal.
+*^	Matches the beginning of input.
+*$	Matches the end of input.
+**	Matches the preceding character zero or more times. For example, zo* matches either z or zoo.
+*+	Matches the preceding character one or more times. For example, zo+ matches zoo but not z.
+*?	Matches the preceding character zero or one time. For example, a?ve? matches the ve in never.
+*.	Matches any single character except a newline character.
 (pattern)	Matches a pattern and remembers the match. 
--\A	Matches only at beginning of a string.
--\b	Matches a word boundary, that is, the position between a word and a space. For example, er\b matches the er in never but not the er in verb.
--\B	Matches a nonword boundary. The ea*r\B expression matches the ear in never early.
--\d	Matches a digit character.
--\D	Matches a non-digit character.
--\f	Matches a form-feed character.
--\n	Matches a newline character.
--\r	Matches a carriage return character.
--\s	Matches any white space including spaces, tabs, form-feed characters, and so on.
--\S	Matches any non-white space character.
--\t	Matches a tab character.
--\v	Matches a vertical tab character.
--\w	Matches any word character including underscore. This expression is equivalent to [A-Za-z0-9_].
--\W	Matches any non-word character. This expression is equivalent to [^A-Za-z0-9_].
--\z	Matches only the end of a string.
--\Z	Matches only the end of a string, or before a newline character at the end.
+*\A	Matches only at beginning of a string.
+*\b	Matches a word boundary, that is, the position between a word and a space. For example, er\b matches the er in never but not the er in verb.
+*\B	Matches a nonword boundary. The ea*r\B expression matches the ear in never early.
+*\d	Matches a digit character.
+*\D	Matches a non-digit character.
+*\f	Matches a form-feed character.
+*\n	Matches a newline character.
+*\r	Matches a carriage return character.
+*\s	Matches any white space including spaces, tabs, form-feed characters, and so on.
+*\S	Matches any non-white space character.
+*\t	Matches a tab character.
+*\v	Matches a vertical tab character.
+*\w	Matches any word character including underscore. This expression is equivalent to [A-Za-z0-9_].
+*\W	Matches any non-word character. This expression is equivalent to [^A-Za-z0-9_].
+*\z	Matches only the end of a string.
+*\Z	Matches only the end of a string, or before a newline character at the end.
 
 In the email regex "[a-z]" represents character between a and z In the expression /^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/ character classes a-z and "\d" are used. This means that a letter a to z and a digit from 0 to 9 can be in the string.
 ### Flags
